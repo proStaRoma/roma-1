@@ -2283,6 +2283,27 @@ input[type=range]::-webkit-slider-runnable-track {
   justify-content: center;
 }
 
+/* .dock__slider //////////////////////// */
+
+
+.dock__slider{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.swiper-slide{
+  width: 400px !important;
+}
+
+.swiper-slide img{
+  width: 100%;
+}
+
+.swiper-button-next{
+  
+}
+
+
 
 
 @media (max-width:1300px) {
