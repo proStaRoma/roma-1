@@ -1,0 +1,543 @@
+:root {
+    --whait: rgb(255, 255, 255);
+    --black: #000;
+    --planirovaABC-color: #000;
+    --text-color: #000;
+    --svg-hover: #19bbb865;
+    --transition_03: all 0.3s ease;
+    --planirovaABC_font-size: 14px;
+    --stroca_width: 1200px;
+    --stroca-margin: 0 auto;
+    --content: #19BBB9;
+}
+
+
+.wrapper {
+    width: 100%;
+}
+
+.content {
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 49%;
+}
+
+.right {
+    width: 49%;
+}
+
+/* Etaj */
+
+.Etaj {
+    width: 100%;
+    position: relative;
+}
+
+.Etaj_item {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.Etaj_item__img {
+    width: 100%;
+    /* height: 700px; */
+    z-index: 1;
+}
+
+.etaj_item_svg {
+    position: absolute;
+    left: 75px;
+    top: 144px;
+}
+
+.etaj_item_path {
+    transition: var(--transition_03);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.etaj_item_path:hover {
+    fill: var(--svg-hover);
+    fill-opacity: 1;
+    opacity: 1;
+}
+
+
+/* .Planirovca */
+
+.Planirovca {
+    width: 100%;
+    position: relative;
+    margin: 50px 0 0;
+}
+
+.Planirovca img {
+    width: 700px;
+}
+
+.planirovca_item_svg {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+}
+
+.planirovca_item_path {
+    transition: var(--transition_03);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.planirovca_item_path:hover {
+    fill: var(--svg-hover);
+    fill-opacity: 1;
+    opacity: 1;
+}
+
+/* 
+[data-planN="0"]{
+    display: none;
+} */
+/* Cvartira */
+.Cvartira{
+    position: relative;
+}
+
+.cvartira_img {
+    width: 50%;
+}
+
+.cvartira_img img {
+    width: 100%;
+}
+
+/* cvartira_info */
+.cvartira_info {
+    width: 700px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    bottom: -100px;
+}
+
+.cvartira_info_item {
+    border-left: solid 2px #dadada;
+    padding-left: 10px;
+    position: relative;
+}
+
+.cvartira_info_item_p {
+    font-size: 18px;
+}
+
+.cvartira_info_item_span {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+#cvartira_info_item_input{
+    width: 180px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.cvartira_info_item_m2 {
+    position: absolute;
+    font-size: 12px;
+    top: 3px;
+    left: 100%;
+}
+
+
+/* Cvartira-3d */
+
+.Cvartira-3d {
+    width: 50%;
+}
+
+
+.Cvartira_3d__img {
+    width: 100%;
+    margin-top: 0px;
+}
+
+.Cvartira_3d__img img {
+    width: 100%;
+    height: 50%;
+}
+
+
+
+@media (max-width: 1600px) {
+    .content {
+        width: 1400px;
+    }
+
+
+    .Planirovca img,
+    .Cvartira_3d__img {
+        width: 600px;
+    }
+    .Cvartira_3d__img,
+    .cvartira_img,
+    .cvartira_info {
+        margin-left: auto;
+        margin-right: 0px;
+    }
+
+
+    .planirovca_item_svg{
+        width: 565.61px;
+        height: 375px;
+        left: 24px;
+        top: 24px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .content {
+        width: 1200px;
+    }
+    .Planirovca img,
+    .cvartira_info {
+        width: 550px;
+        bottom: -160px;
+    }
+
+    .cvartira_info{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .planirovca_item_svg{
+        width: 518.57px;
+        height: 344.02px;
+        left: 22.25px;
+        top: 22.25px;
+    }
+}
+
+
+@media (max-width: 1250px) {
+    .content {
+        width: 1000px;
+    }
+    .Planirovca img,
+    .cvartira_info {
+        width: 450px;
+    }
+    .planirovca_item_svg{
+        width: 423.37px;
+        height: 280.33px;
+        left: 18.16px;
+        top: 18.16px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .content {
+        width: 800px;
+        flex-direction: column;
+    }
+
+    .Planirovca img{
+        width: 100%;
+    }
+
+    .Etaj_item{
+        margin-bottom: 30px;
+        top: -53px;
+        position: relative;
+    }
+    .left, .right{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .Cvartira{
+        width: 100%;
+        display: flex;
+        /* align-items: center; */
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .Cvartira_1{
+        width: 100%;
+    }
+    .Cvartira-3d{
+        width: 43.8%;
+    }
+    .Cvartira_3d__img,
+    .cvartira_img{
+        margin: auto;
+        margin: 0px;
+    }
+    .cvartira_info{
+        position: absolute;
+        bottom: -100px;
+        width: 100%;
+    }
+    .Etaj{width: initial;}
+    .user_bron{position: absolute;}
+    .etaj_item_svg{
+        width: 292.62px;
+        top: 72.22px;
+        left: 53.81px;        
+    }
+    .planirovca_item_svg{
+        width: 368.77px;
+        height: 218.86px;
+        left: -6.84px;
+        top: 14.16px;
+    }
+    .Planirovca-{
+        position: absolute;
+        right: 0;
+        top: -488px;
+    }
+    .Planirovca_indicator{display: none;}
+    .user_bron{position: absolute; right: 0; top: 0px; bottom: 0; height: 50px; margin-top: auto; margin-bottom: auto;}
+    .wrapper{margin: 0 0 150px;}
+    .etadj__header{margin: 0;}
+    .Planirovca{margin: 0;}
+}
+
+@media (max-width:850px){
+    .content {
+        width: 90%;
+    }
+    .Planirovca-{
+        position: relative;
+        top: 0;
+        width: 666px;
+        margin: auto;
+    }
+    .user_bron{display: none;}
+    .Etaj{margin: auto; width: 666px;height: auto;}
+}
+
+@media (max-width:740px){
+    .content {
+        width: 600px;
+        flex-direction: column;
+    }
+
+    .Etaj_item__img{
+        margin-top: 20px;
+        /* height: 500px; */
+    }
+    .etaj_item_svg{
+        width: 292.62px;
+        top: 71.22px;
+        left: 53.81px;        
+    }
+    .planirovca_item_svg{
+        width: 235.63px;
+        height: 156.26px;
+        left: 10.11px;
+        top: 10.11px;
+    }
+    .Etaj{width: 100%;}
+    .Planirovca-{width: 100%;}
+
+}
+
+@media (max-width:650px){
+    .content {
+        width: 500px;
+        flex-direction: column;
+    }
+    .Planirovca img,
+    .Cvartira_3d__img{
+        width: 200px;
+    }
+    .etaj_item_svg{
+        width: 292.62px;
+        top: 72.22px;
+        left: 53.81px;        
+    }
+    .Cvartira-3d{
+        width: 100%;
+        margin: 0 0 50px;
+    }
+    .planirovca_item_svg {
+        width: 485.3px;
+        height: 312.56px;
+        left: 13.21px;
+        top: 20.21px;
+    }
+}
+@media (max-width:650px){
+    .wrapper {
+        padding-bottom: 200px;
+    }
+    .content {
+        width: 500px;
+        flex-direction: column;
+    }
+    .left, .right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .Planirovca img,
+    .cvartira_img,
+    .Cvartira_3d__img{
+        width: 100%;
+    }
+    .Cvartira{
+        flex-direction: column;
+    }
+    .cvartira_info_item_p {
+        font-size: 12px;
+    }
+    .cvartira_info_item_span{
+        font-size: 21px;
+    }
+    .etaj_item_svg{
+        width: 292.62px;
+        top: 13.22px;
+        left: 53.81px;        
+    }
+    .etadj__header{text-align: center;}
+}
+
+@media (max-width:550px){
+    .content {
+        width: 450px;
+        flex-direction: column;
+    }
+    .left, .right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .planirovca_item_svg {
+        width: 290.61px;
+        height: 187.41px;
+        left: 9.12px;
+        top: 12.12px;
+    }
+    .cvartira_info{
+        bottom: -203px;
+    }
+}
+@media (max-width:480px) {
+    .content {
+        width: 380px;
+    }
+}
+
+@media (max-width:400px) {
+
+    .etaj_item_svg{
+        width: 234.1px;
+        top: 18.22px;
+        left: 43.05px;        
+    }
+    .content {
+        width: 330px;
+    }
+}
+
+
+
+@media (max-width:350px){
+    .content {
+        width: 300px;
+        flex-direction: column;
+    }
+    .Etaj_item__img{
+        margin-top: 30px;
+        /* height: 400px; */
+    }
+    .planirovca_item_svg{
+        width: 190.42px;
+        height: 126.96px;
+        left: 6.12px;
+        top: 7.12px;
+    }
+}
+@media (max-width:310px) {
+    .content {
+        width: 200px;
+    }
+}
+@media (max-width:250px){
+    .content {
+        width: 100%;
+        flex-direction: column;
+    }
+    .etaj_item_svg{
+        width: 90%;
+        top: -118px;
+        left: 30.15px;
+    }
+}
+
+.anime{
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+}
+
+.brends_block-head{
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+
+@media(max-width:850px){
+    .user_bron{margin: 300px 0 100px 0;}
+    .Planirovca_indicator{top: 600px;}
+}
+@media(max-width:740px){
+    .user_bron{margin: 350px 0 100px 0;}
+}
+@media(max-width:650px){
+    .Planirovca_indicator {top: 1060px;}
+    .user_bron {margin: 65px 0 100px 0;}
+}
+@media(max-width:600px){
+    .user_bron {margin: 250px 0 100px 0;}
+}
+@media(max-width:550px){
+    .Planirovca_indicator {top: 942px;}
+}
+@media(max-width:400px){
+    .Planirovca_indicator {top: 860px;}
+}
+@media(max-width:350px){
+    .Planirovca_indicator {top: 810px;}
+}
+.cvartira_2{
+    display: flex;
+}
+.Cvartira_3d__img{width: 100%;}
+.Cvartira_1{display: flex;flex-direction: column;position: relative;}
+.user_bron{display: none;}
+
+
+.calculator__content {
+    width: 618px;
+    padding: 50px;
+    border: 2px solid #19ddd9;
+}
+
+.calculator__vibor_item p{
+    font-size: 16px;
+}
+.calculator__otvet_item p{
+    font-size: 16px;
+}
+
+.calculator__otvet_item input{
+    height: 34px;
+}
